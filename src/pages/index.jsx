@@ -29,9 +29,9 @@ const  Result=()=>{
         }
     }
     const handleScroll=throttle(()=>{
+        //触底了
         if (!check(divRef.current)) {
             setLoading(true)
-            console.log("执行几次")
             setPage(page+1)
             }
     },1000);

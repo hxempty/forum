@@ -6,7 +6,7 @@ entry: "./src/index.js",
 resolve:{
     extensions: [".js", ".jsx"],
     alias: {
-        "@": path.resolve(__dirname, "./src"), // 这样配置后 @ 可以指向 src 目录
+        "@": path.resolve(__dirname, "./src"), //  @ 指向 src 目录
     },
 },
 output: {
@@ -49,7 +49,7 @@ devServer: {
         '/api/info': {
             target: 'http://localhost:9092', 
             pathRewrite: {"^/api/info" : "/api/info"}, 
-            changeOrigin: true, // 加了这个属性，那后端收到的请求头中的host是目标地址 target
+            changeOrigin: true, // 请求头中的host是目标地址 target
             // secure: false,   // 设置支持https协议的代理,
         },
         '/platform/service.do': {
