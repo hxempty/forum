@@ -1,0 +1,26 @@
+.container{
+    height:100%
+}
+.post{
+    padding: 25px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.title{
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+.summary{
+    line-height: 25px;
+    word-break: break-all;
+    color: #999;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+}
+.button{
+    padding: 25px 0;
+}

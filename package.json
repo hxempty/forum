@@ -4,7 +4,7 @@
   "description": "根据 [支付宝开发者社区](https://forum.alipay.com/mini-app) 首页，实现文章列表",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --mode development",
+    "dev": "webpack serve ",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,13 +25,17 @@
     "@babel/preset-env": "^7.15.8",
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.3",
+    "css-loader": "^6.4.0",
+    "style-loader": "^3.3.1",
     "webpack": "^5.59.1",
     "webpack-cli": "^4.9.1"
   },
   "dependencies": {
+    "axios": "^0.23.0",
+    "express": "^4.17.1",
     "html-webpack-plugin": "^5.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^4.3.1"
   }
 }
