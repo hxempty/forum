@@ -4,7 +4,7 @@ import {request} from '@/request'
 import  './style.css';
 const  Result=()=>{
     const [page, setPage] = useState(1);
-    const [loading, setLoading] = useState(true);//控制加载更多文案
+    // const [loading, setLoading] = useState(true);//控制加载更多文案
     const [content, setContent] = useState([]);
     //长列表滚动监听
     const divRef = useRef();
@@ -31,7 +31,7 @@ const  Result=()=>{
     const handleScroll=throttle(()=>{
         //触底了
         if (!check(divRef.current)) {
-            setLoading(true)
+            // setLoading(true)
             setPage(page+1)
             }
     },1000);
@@ -48,7 +48,7 @@ const  Result=()=>{
             setContent((pre=[])=>{
                 return [...pre,...res.data.data.rows]
             });  
-            setLoading(false)  
+            // setLoading(false)  
         }).catch(function(ex) {
             console.err('erro:', ex)
         });
@@ -73,7 +73,7 @@ const  Result=()=>{
     return (
     <>
     {render()}
-    { loading?<div style={{color:'red'}}>加载更多</div> :null }
+    { content.length?<div style={{color:'red'}}><span>加载更多。。。</span></div> :null }
     </>
     )
 }
